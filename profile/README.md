@@ -60,7 +60,7 @@
     </tr>
     <tr>
         <th>배포</th>
-        <td><a href="https://wantload-fe.vercel.app/">wantload</a></td>
+        <td><a href="https://wantload-fe.vercel.app/">WantLoad</a></td>
     </tr>
 </table>
 
@@ -88,20 +88,26 @@
 
 ## 📌 세부 내용
 ### 🔗 핵심기능 1 - 오늘의 운세
-동접자 500명 이하의 일시적 트래픽일 때, 
+<img width="290px" src="https://github.com/2023-venture-startup-hackathon-wantload/.github/assets/97885933/68dc46e8-d7d8-443d-82ac-1d878ebc3df2"/>
+
+동접자 500명 이하의 **일시적 트래픽**일 때,    
 단시간 동안 사용자의 이목을 끌며 상품 홍보 효과까지 얻을 수 있는 오늘의 운세 서비스
 - 재물운, 금전운, 성공운 중 사용자가 보고 싶은 항목의 운세를 선택 가능한 방식이다.
 - 하단에는 나의 대기 번호를 볼 수 있고, 번호가 0이 되면 다음 페이지로 넘어가는 버튼이 활성화된다.
 - 선택 뒤에는 운세와 함께 짧은 문구, 설명, 운세와 어울리는 항목의 아이템을 추천해준다.
 ### 🔗 핵심기능 2 - 카드 뒤집기 게임
-동접자 500명 이상의 장기적 트래픽일 때, 
+<img width="290px" src="https://github.com/2023-venture-startup-hackathon-wantload/.github/assets/97885933/4af19850-2875-4bdd-ac89-ff060549821a"/>
+
+동접자 500명 이상의 **장기적 트래픽**일 때,    
 긴 시간 동안 사용자가 게임을 즐기며 지루함을 덜어줄 수 있는 카드 게임 서비스
 - 상품 이미지들로 이루어진 카드 뒤집기 게임을 제공한다.
 - 하단에는 나의 대기 번호를 볼 수 있고, 번호가 0이 되면 다음 페이지로 넘어가는 버튼이 활성화된다.
 - 고득점자에게 상품을 걸어 쿠폰과 같은 혜택 제공하는 보상 방식을 도입한다.
 
 ### 🔗 트래픽 모니터링 방식
-AWS에서 제공하는 AWS Virtual Waiting Room 서비스를 구축하여 서비스의 사용자들을 대기 시켜두고 대기자 수를 파악하려 했지만… CloudFormation, AWS Lambda, AWS DynamoDB, AWS SQS, AWS ElasticCache for Redis 등 사용해보지 않은 기술들이 다수였다. 답답한 마음을 가지고 멘토분들에게도 여쭤보니 하루 안에 제대로 동작하게 만들기는 힘들 것이라는 답변을 듣고 조금 더 시도해보다가 CloudFormation 에서 stack설정하는 부분부터 막혔다. 
+AWS에서 제공하는 AWS Virtual Waiting Room 서비스를 구축하여    
+서비스의 사용자들을 대기 시켜두고 대기자 수를 파악하려 했지만…     
+CloudFormation, AWS Lambda, AWS DynamoDB, AWS SQS, AWS ElasticCache for Redis 등 사용해보지 않은 기술들이 다수였다. 답답한 마음을 가지고 멘토분들에게도 여쭤보니 하루 안에 제대로 동작하게 만들기는 힘들 것이라는 답변을 듣고 조금 더 시도해보다가 CloudFormation 에서 stack설정하는 부분부터 막혔다.    
 결국 임시로 유저의 트래픽 정도를 알 수 있게 EC2 내에서 빠른 접근이 가능한 Redis를 통해 대기자 수를 담아 가상의 유저 수를 1초마다 들어오고 나가는 것을 구현하는 방향으로 동시 접속자 트래픽을 가정하였다.
 
 ### 🔗 사용 기술 및 인프라
