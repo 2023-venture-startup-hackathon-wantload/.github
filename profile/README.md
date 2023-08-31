@@ -1,3 +1,7 @@
+## 📌 수상
+### 🏆 최우수상 중소벤처기업부장관상 🏆
+<img width="500" alt="img" src="https://github.com/2023-venture-startup-hackathon-wantload/.github/assets/97885933/51901742-38bb-4357-97ca-dc1e0c55aefc">
+
 ## 📌 Team
 <table>
   <tr>
